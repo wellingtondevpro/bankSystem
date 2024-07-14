@@ -12,9 +12,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @Controller
-@RequestMapping("/usuarios")
 @RestController
-
+@RequestMapping("/usuarios")
 
 public class UsuarioController {
 
