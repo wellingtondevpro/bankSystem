@@ -29,7 +29,7 @@ public class UsuarioController {
         return new ResponseEntity<>(NewUsuario, HttpStatus.CREATED);
     }
 
-    @GetMapping("/listar-todos-usuarios")
+    @GetMapping
     public ResponseEntity<List<Usuario>> BuscarTodosUsuarios(){
         var usuario = this.usuarioService.BuscarTodosUsuarios();
         return new ResponseEntity<>(usuario, HttpStatus.OK);
