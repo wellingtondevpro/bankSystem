@@ -4,12 +4,15 @@ package bruce.pro.banksystem.domain.usuario;
 import jakarta.persistence.*;
 import lombok.EqualsAndHashCode;
 import lombok.Generated;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.math.BigDecimal;
 
 @Entity(name = "Usuario")
 @Table(name = "Usuario")
-@EqualsAndHashCode(of = "id")
+@Getter
+@Setter
 
 public class Usuario {
 
@@ -26,7 +29,8 @@ public class Usuario {
     private UserType userType;
     private BigDecimal balance;
 
-public Usuario(UsuarioDTO dto){
+
+    public Usuario(UsuarioDTO dto){
 
     this.name = dto.name();
     this.document = dto.document();

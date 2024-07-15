@@ -5,6 +5,8 @@ import bruce.pro.banksystem.domain.usuario.Usuario;
 import bruce.pro.banksystem.domain.usuario.UsuarioDTO;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 
 public class UsuarioService {
@@ -25,4 +27,7 @@ public class UsuarioService {
         return NewUsuario;
     }
 
+    public List<Usuario> BuscarTodosUsuarios() {
+        return this.usuarioRepository.findAll();
+    }
 }
